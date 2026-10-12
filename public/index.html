@@ -66,7 +66,8 @@
   .meta i { color: var(--pink); font-style: normal; margin: 0 .5em; }
 
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 8px 18px; }
-  .item { display: grid; grid-template-columns: 76px 1fr; gap: 12px; padding: 20px 6px; border-bottom: 1px solid var(--line); }
+  .item { padding: 20px 6px; border-bottom: 1px solid var(--line); }
+  .item .time { display: block; margin-bottom: 4px; }
   .item:last-child { border-bottom: 0; }
   .time { color: var(--orange); font-weight: 800; font-size: 17px; }
   .title { font-weight: 600; font-size: 17px; line-height: 1.4; }
@@ -93,7 +94,7 @@
   @media (max-width: 520px) {
     .wrap { padding-top: 36px; }
     .card { padding: 6px 12px; }
-    .item, .break { grid-template-columns: 58px 1fr; gap: 10px; }
+    .break { grid-template-columns: 58px 1fr; gap: 10px; }
     .time { font-size: 15px; }
     .title { font-size: 15px; }
     .tab { padding: 10px 14px; font-size: 12px; }
@@ -117,19 +118,19 @@
   <section id="dia-1" role="tabpanel" aria-labelledby="tab-1">
     <p class="meta" style="text-align:center">Dia <b>01</b><i>•</i>16 de outubro<i>•</i>Florianópolis</p>
     <div class="card">
-      <div class="item"><span class="time">10h00</span><div><p class="title">Qual o futuro do marketing? Tendências de marketing para negócios com cases práticos</p><p class="who">Camila Renaux</p></div></div>
-      <div class="item"><span class="time">10h40</span><div><p class="title">Como sobrevivi ao “fim do marketing” e construí uma carreira à prova de futuro</p><p class="who">Camila Renaux</p></div></div>
-      <div class="item"><span class="time">11h20</span><div><p class="title">Origem Now: a urgência da essência</p><p class="who">Gil Pinna</p></div></div>
+      <div class="item"><div><p class="title">Qual o futuro do marketing? Tendências de marketing para negócios com cases práticos</p><p class="who">Camila Renaux</p></div></div>
+      <div class="item"><div><p class="title">Como sobrevivi ao “fim do marketing” e construí uma carreira à prova de futuro</p><p class="who">Camila Renaux</p></div></div>
+      <div class="item"><div><p class="title">Origem Now: a urgência da essência</p><p class="who">Gil Pinna</p></div></div>
       <div class="break"><span>12h00</span><span>Almoço</span></div>
-      <div class="item"><span class="time">13h30</span><div><p class="title">Criatividade que engaja e converte: case campanhas Canva</p><p class="who">Flávio Santos</p></div></div>
-      <div class="item"><span class="time">14h10</span><div><p class="title">Marketing estratégico na prática: seu plano 2027 está aqui</p><p class="who">Camila Renaux</p></div></div>
-      <div class="item"><span class="time">14h50</span><div><p class="title">Marketing aplicado, carreira e resultados: casos reais</p><p class="who">Renata, Bruna, Thaísa</p></div></div>
-      <div class="item"><span class="time">15h30</span><div><p class="title">Construindo o futuro do marketing: pós-IA e pós-inovação</p><p class="who">Gil Giardelli</p></div></div>
-      <div class="item"><span class="time">16h10</span><div><p class="title">Da estratégia à aplicação: próximos passos</p><p class="who">Camila Renaux, Júlia Wolf Cruz</p></div></div>
+      <div class="item"><div><p class="title">Criatividade que engaja e converte: case campanhas Canva</p><p class="who">Flávio Santos</p></div></div>
+      <div class="item"><div><p class="title">Marketing estratégico na prática: seu plano 2027 está aqui</p><p class="who">Camila Renaux</p></div></div>
+      <div class="item"><div><p class="title">Marketing aplicado, carreira e resultados: casos reais</p><p class="who">Renata, Bruna, Thaísa</p></div></div>
+      <div class="item"><div><p class="title">Construindo o futuro do marketing: pós-IA e pós-inovação</p><p class="who">Gil Giardelli</p></div></div>
+      <div class="item"><div><p class="title">Da estratégia à aplicação: próximos passos</p><p class="who">Camila Renaux, Júlia Wolf Cruz</p></div></div>
       <div class="break"><span>16h30</span><span>Coffee break</span></div>
-      <div class="item"><span class="time">17h20</span><div><p class="title">Mídia fora da caixa: entre o caos de diferentes canais, como planejar e executar campanhas que funcionam</p><p class="who">Aretha Cursino, Fátima Leal</p></div></div>
-      <div class="item"><span class="time">18h00</span><div><p class="title">Conexões do dia</p><p class="who">Camila Renaux</p></div></div>
-      <div class="item"><span class="time">18h20</span><div><p class="title">Você não é pequeno, a sua embalagem que é: modelo de negócio e posicionamento</p><p class="who">Eduardo Vieira</p></div></div>
+      <div class="item"><div><p class="title">Mídia fora da caixa: entre o caos de diferentes canais, como planejar e executar campanhas que funcionam</p><p class="who">Aretha Cursino, Fátima Leal</p></div></div>
+      <div class="item"><div><p class="title">Conexões do dia</p><p class="who">Camila Renaux</p></div></div>
+      <div class="item"><div><p class="title">Você não é pequeno, a sua embalagem que é: modelo de negócio e posicionamento</p><p class="who">Eduardo Vieira</p></div></div>
       <div class="break"><span>19h00</span><span>Encerramento</span></div>
     </div>
   </section>
@@ -138,19 +139,19 @@
     <p class="meta" style="text-align:center">Dia <b>02</b><i>•</i>17 de outubro<i>•</i>Florianópolis</p>
     <div class="card">
       <div class="item"><span class="time">10h00</span><div><p class="title">Abertura</p><p class="who">Urano Klock</p></div></div>
-      <div class="item"><span class="time">10h15</span><div><p class="title">Construindo uma área de marketing AI Native com Lovable e AI</p><p class="who">Alexandre Messina</p></div></div>
-      <div class="item"><span class="time">10h55</span><div><p class="title">Como unir estratégia com IA do jeito certo e escalável</p><p class="who">Júlia Wolf Cruz</p></div></div>
-      <div class="item"><span class="time">11h35</span><div><p class="title">O estratégico como a entrega mais valiosa do marketing</p><p class="who">Ana Paula Ruschel, Camila Renaux, Urano Klock</p></div></div>
-      <div class="item"><span class="time">12h15</span><div><p class="title">Oportunidades não exploradas</p><p class="who">Camila Renaux</p></div></div>
+      <div class="item"><div><p class="title">Construindo uma área de marketing AI Native com Lovable e AI</p><p class="who">Alexandre Messina</p></div></div>
+      <div class="item"><div><p class="title">Como unir estratégia com IA do jeito certo e escalável</p><p class="who">Júlia Wolf Cruz</p></div></div>
+      <div class="item"><div><p class="title">O estratégico como a entrega mais valiosa do marketing</p><p class="who">Ana Paula Ruschel, Camila Renaux, Urano Klock</p></div></div>
+      <div class="item"><div><p class="title">Oportunidades não exploradas</p><p class="who">Camila Renaux</p></div></div>
       <div class="break"><span>12h30</span><span>Almoço</span></div>
-      <div class="item"><span class="time">14h00</span><div><p class="title">Customer Experience: o conversacional como ferramenta de integração em jornadas complexas</p><p class="who">Ricardo Alves</p></div></div>
-      <div class="item"><span class="time">14h40</span><div><p class="title">A nova economia do relacionamento: conexões humanas como o ativo mais valioso na era da IA</p><p class="who">Ingrid Abdo</p></div></div>
-      <div class="item"><span class="time">15h20</span><div><p class="title">Dados sem hype: da governança ao impacto no negócio</p><p class="who">Thaís Fernandes</p></div></div>
+      <div class="item"><div><p class="title">Customer Experience: o conversacional como ferramenta de integração em jornadas complexas</p><p class="who">Ricardo Alves</p></div></div>
+      <div class="item"><div><p class="title">A nova economia do relacionamento: conexões humanas como o ativo mais valioso na era da IA</p><p class="who">Ingrid Abdo</p></div></div>
+      <div class="item"><div><p class="title">Dados sem hype: da governança ao impacto no negócio</p><p class="who">Thaís Fernandes</p></div></div>
       <div class="break"><span>16h00</span><span>Coffee break</span></div>
-      <div class="item"><span class="time">16h30</span><div><p class="title">Além de agentes, skills e prompts: a IA que funciona na operação de marketing</p><p class="who">Júlia Wolf Cruz</p></div></div>
-      <div class="item"><span class="time">17h10</span><div><p class="title">Produção de conteúdo que engaja e converte: os bastidores do case Meu Marido Marceneiro (+1,5M de seguidores)</p><p class="who">Ana Boaventura, Bernardo Costa</p></div></div>
-      <div class="item"><span class="time">17h40</span><div><p class="title">Da presença ao resultado: estratégia, métricas e IA no planejamento de mídia</p><p class="who">Valton Werner</p></div></div>
-      <div class="item"><span class="time">18h20</span><div><p class="title">A coragem de evoluir: liderar e crescer sem se abandonar no processo</p><p class="who">Mariana Rhormens</p></div></div>
+      <div class="item"><div><p class="title">Além de agentes, skills e prompts: a IA que funciona na operação de marketing</p><p class="who">Júlia Wolf Cruz</p></div></div>
+      <div class="item"><div><p class="title">Produção de conteúdo que engaja e converte: os bastidores do case Meu Marido Marceneiro (+1,5M de seguidores)</p><p class="who">Ana Boaventura, Bernardo Costa</p></div></div>
+      <div class="item"><div><p class="title">Da presença ao resultado: estratégia, métricas e IA no planejamento de mídia</p><p class="who">Valton Werner</p></div></div>
+      <div class="item"><div><p class="title">A coragem de evoluir: liderar e crescer sem se abandonar no processo</p><p class="who">Mariana Rhormens</p></div></div>
       <div class="break"><span>19h00</span><span>Encerramento</span></div>
     </div>
   </section>
