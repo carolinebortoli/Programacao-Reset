@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Programação · Reset Marketing</title>
+<meta name="description" content="Programação completa do Reset Marketing — 16 e 17 de outubro, Majestic Palace Hotel, Florianópolis.">
+<meta property="og:title" content="Programação · Reset Marketing">
+<meta property="og:description" content="Um novo olhar para o marketing. 16 e 17 de outubro em Florianópolis.">
+<meta name="theme-color" content="#1a1320">
+<link rel="icon" href="reset-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1a1320;
+    --card: #1f1724;
+    --line: rgba(255,255,255,.09);
+    --text: #f6efef;
+    --muted: #b9adb8;
+    --cream: #fdeeea;
+    --orange: #f0773f;
+    --pink: #ef3f78;
+    --purple: #b93fdc;
+    --green: #2ecc71;
+    --grad: linear-gradient(90deg, var(--orange), var(--pink) 45%, var(--purple));
+    --pill: linear-gradient(90deg, #ef5a45, #ee3f7d);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Sora", system-ui, sans-serif;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(60% 40% at 0% 0%, rgba(200,70,50,.55), transparent 70%),
+      radial-gradient(55% 40% at 100% 0%, rgba(150,40,110,.55), transparent 70%),
+      radial-gradient(50% 30% at 100% 100%, rgba(150,70,40,.35), transparent 70%);
+    background-attachment: fixed;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 16px 56px; }
+
+  header { text-align: center; }
+  .logo { width: 170px; height: auto; display: block; margin: 0 auto 12px; }
+  .tagline { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 20px; color: var(--cream); opacity: .92; }
+  h1 {
+    font-weight: 800; letter-spacing: -.02em; line-height: 1.05;
+    font-size: clamp(52px, 13vw, 96px);
+    margin: 18px 0 20px;
+    background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  .tabs { display: inline-flex; gap: 6px; padding: 5px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid var(--line); margin-bottom: 16px; }
+  .tab {
+    font: 600 13px/1 "Sora", sans-serif; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); background: none; border: 0; cursor: pointer;
+    padding: 11px 20px; border-radius: 999px; transition: background .2s, color .2s;
+  }
+  .tab[aria-selected="true"] { background: var(--pill); color: #fff; }
+  .tab:focus-visible { outline: 2px solid var(--cream); outline-offset: 2px; }
+
+  .meta { font-weight: 600; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 28px; }
+  .meta b { color: var(--orange); font-weight: 600; }
+  .meta i { color: var(--pink); font-style: normal; margin: 0 .5em; }
+
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 8px 18px; }
+  .item { display: grid; grid-template-columns: 76px 1fr; gap: 12px; padding: 20px 6px; border-bottom: 1px solid var(--line); }
+  .item:last-child { border-bottom: 0; }
+  .time { color: var(--orange); font-weight: 800; font-size: 17px; }
+  .title { font-weight: 600; font-size: 17px; line-height: 1.4; }
+  .who { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+  .break {
+    display: grid; grid-template-columns: 76px 1fr; gap: 12px; align-items: center;
+    background: var(--pill); border-radius: 999px; padding: 13px 18px; margin: 14px -8px;
+    font-weight: 800; font-size: 16px;
+  }
+  .break span:last-child { font-weight: 600; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; }
+  .card > .break:last-child { margin-bottom: 10px; }
+  .card > .break + .item { border-top: 0; }
+
+  .cta {
+    margin-top: 28px; text-align: center; border-radius: 18px; padding: 34px 20px;
+    border: 1px solid var(--line);
+    background: linear-gradient(135deg, rgba(120,40,110,.65), rgba(60,25,50,.6) 55%, rgba(110,45,40,.55));
+  }
+  .cta h2 { font-family: Georgia, serif; font-style: italic; font-weight: 400; font-size: 26px; color: var(--cream); }
+  .cta p { color: var(--muted); font-size: 14px; margin: 10px 0 22px; }
+  .cta p strong { color: var(--orange); }
+  .btn {
+    display: inline-block; text-decoration: none; color: #fff;
+    font-weight: 800; font-size: 15px; letter-spacing: .12em; text-transform: uppercase;
+    padding: 17px 34px; border-radius: 999px;
+    background: linear-gradient(90deg, #2ecc71, #1fa85a);
+    box-shadow: 0 10px 30px rgba(46,204,113,.25);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(46,204,113,.35); }
+
+  footer { text-align: center; margin-top: 36px; }
+  .label { color: var(--orange); font-weight: 600; font-size: 12px; letter-spacing: .25em; text-transform: uppercase; }
+  .venue { font-weight: 800; font-size: 18px; margin: 8px 0 6px; }
+  .addr { color: var(--muted); font-size: 13px; line-height: 1.6; }
+  .addr a { color: inherit; text-decoration-color: rgba(255,255,255,.25); text-underline-offset: 3px; }
+
+  [hidden] { display: none !important; }
+
+  @media (max-width: 520px) {
+    .wrap { padding-top: 36px; }
+    .card { padding: 6px 12px; }
+    .item, .break { grid-template-columns: 58px 1fr; gap: 10px; }
+    .time { font-size: 15px; }
+    .title { font-size: 15px; }
+    .tab { padding: 10px 14px; font-size: 12px; }
+    .meta { font-size: 11px; letter-spacing: .14em; }
+    .break { margin: 12px -4px; padding: 12px 14px; font-size: 15px; }
+    .btn { padding: 16px 24px; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="logo" src="reset-logo.png" alt="Reset Marketing" width="540" height="220">
+    <p class="tagline">Um novo olhar para o marketing</p>
+    <h1>Programação</h1>
+    <div class="tabs" role="tablist" aria-label="Dias do evento">
+      <button class="tab" role="tab" id="tab-1" aria-controls="dia-1" aria-selected="true">Dia 01</button>
+      <button class="tab" role="tab" id="tab-2" aria-controls="dia-2" aria-selected="false" tabindex="-1">Dia 02</button>
+    </div>
+  </header>
+
+  <section id="dia-1" role="tabpanel" aria-labelledby="tab-1">
+    <p class="meta" style="text-align:center">Dia <b>01</b><i>•</i>16 de outubro<i>•</i>Florianópolis</p>
+    <div class="card">
+      <div class="item"><span class="time">10h00</span><div><p class="title">Qual o futuro do marketing? Tendências de marketing para negócios com cases práticos</p><p class="who">Camila Renaux</p></div></div>
+      <div class="item"><span class="time">10h40</span><div><p class="title">Marketing estratégico na prática: seu plano 2027 está aqui</p><p class="who">Camila Renaux</p></div></div>
+      <div class="item"><span class="time">11h20</span><div><p class="title">Origem Now: a urgência da essência</p><p class="who">Gil Pinna</p></div></div>
+      <div class="break"><span>12h00</span><span>Almoço</span></div>
+      <div class="item"><span class="time">13h30</span><div><p class="title">Criatividade que engaja e converte: case campanhas Canva</p><p class="who">Flávio Santos</p></div></div>
+      <div class="item"><span class="time">14h10</span><div><p class="title">Como sobrevivi ao “fim do marketing” e construí uma carreira à prova de futuro</p><p class="who">Camila Renaux</p></div></div>
+      <div class="item"><span class="time">14h50</span><div><p class="title">Marketing aplicado, carreira e resultados: casos reais</p><p class="who">Alunos do Programa Avançado</p></div></div>
+      <div class="item"><span class="time">15h30</span><div><p class="title">Você não é pequeno, a sua embalagem que é: modelo de negócio e posicionamento</p><p class="who">Eduardo Vieira</p></div></div>
+      <div class="item"><span class="time">16h10</span><div><p class="title">Da estratégia à aplicação: próximos passos</p><p class="who">Camila Renaux, Júlia Wolf Cruz</p></div></div>
+      <div class="break"><span>16h30</span><span>Coffee break</span></div>
+      <div class="item"><span class="time">17h20</span><div><p class="title">Mídia fora da caixa: entre o caos de diferentes canais, como planejar e executar campanhas que funcionam</p><p class="who">Aretha Cursino, Fátima Leal</p></div></div>
+      <div class="item"><span class="time">18h00</span><div><p class="title">Conexões do dia</p><p class="who">Camila Renaux</p></div></div>
+      <div class="item"><span class="time">18h20</span><div><p class="title">Construindo o futuro do marketing: pós-IA e pós-inovação</p><p class="who">Gil Giardelli</p></div></div>
+      <div class="break"><span>19h00</span><span>Encerramento</span></div>
+    </div>
+  </section>
+
+  <section id="dia-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+    <p class="meta" style="text-align:center">Dia <b>02</b><i>•</i>17 de outubro<i>•</i>Florianópolis</p>
+    <div class="card">
+      <div class="item"><span class="time">10h00</span><div><p class="title">Abertura</p><p class="who">Urano Klock</p></div></div>
+      <div class="item"><span class="time">10h15</span><div><p class="title">Construindo uma área de marketing AI Native com Lovable e AI</p><p class="who">Alexandre Messina</p></div></div>
+      <div class="item"><span class="time">10h55</span><div><p class="title">Como unir estratégia com IA do jeito certo e escalável</p><p class="who">Camila Renaux, Júlia Wolf Cruz</p></div></div>
+      <div class="item"><span class="time">11h35</span><div><p class="title">O estratégico como a entrega mais valiosa do marketing</p><p class="who">Ana Paula Ruschel, Camila Renaux, Júlia Wolf Cruz, Urano Klock</p></div></div>
+      <div class="item"><span class="time">12h15</span><div><p class="title">Oportunidades não exploradas</p><p class="who">Camila Renaux</p></div></div>
+      <div class="break"><span>12h30</span><span>Almoço</span></div>
+      <div class="item"><span class="time">14h00</span><div><p class="title">Customer Experience: o conversacional como ferramenta de integração em jornadas complexas</p><p class="who">Ricardo Alves</p></div></div>
+      <div class="item"><span class="time">14h40</span><div><p class="title">A nova economia do relacionamento: conexões humanas como o ativo mais valioso na era da IA</p><p class="who">Ingrid Abdo</p></div></div>
+      <div class="item"><span class="time">15h20</span><div><p class="title">Dados sem hype: da governança ao impacto no negócio</p><p class="who">Thaís Fernandes</p></div></div>
+      <div class="break"><span>16h00</span><span>Coffee break</span></div>
+      <div class="item"><span class="time">16h30</span><div><p class="title">Além de agentes, skills e prompts: a IA que funciona na operação de marketing</p><p class="who">Júlia Wolf Cruz</p></div></div>
+      <div class="item"><span class="time">17h10</span><div><p class="title">Produção de conteúdo que engaja e converte: os bastidores do case Meu Marido Marceneiro (+1,5M de seguidores)</p><p class="who">Ana Boaventura, Bernardo Costa</p></div></div>
+      <div class="item"><span class="time">17h40</span><div><p class="title">Da presença ao resultado: estratégia, métricas e IA no planejamento de mídia</p><p class="who">Valton Werner</p></div></div>
+      <div class="item"><span class="time">18h20</span><div><p class="title">A coragem de evoluir: liderar e crescer sem se abandonar no processo</p><p class="who">Mariana Rhormens</p></div></div>
+      <div class="break"><span>19h00</span><span>Encerramento</span></div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ainda não garantiu sua vaga?</h2>
+    <p><strong>Últimas vagas</strong> para o Reset Marketing.</p>
+    <a class="btn" href="https://cursos.camilarenaux.com.br/reset/programacao" target="_blank" rel="noopener">Quero participar →</a>
+  </section>
+
+  <footer>
+    <p class="label">Local</p>
+    <p class="venue">Majestic Palace Hotel</p>
+    <p class="addr">
+      <a href="https://www.google.com/maps/search/?api=1&query=Majestic+Palace+Hotel+Florian%C3%B3polis" target="_blank" rel="noopener">Av. Jornalista Rubens de Arruda Ramos, 2746 (Beira-Mar Norte)<br>
+      Centro, Florianópolis – SC · CEP 88015-702</a>
+    </p>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on);
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tab.focus();
+      history.replaceState(null, '', '#' + tab.getAttribute('aria-controls'));
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t); });
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          select(tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length], true);
+        }
+      });
+    });
+    // Abre o dia 2 automaticamente em 17/10, ou via link #dia-2
+    var now = new Date();
+    if (location.hash === '#dia-2' || (location.hash !== '#dia-1' && now.getMonth() === 9 && now.getDate() === 17)) {
+      select(tabs[1]);
+    }
+  })();
+</script>
+</body>
+</html>
